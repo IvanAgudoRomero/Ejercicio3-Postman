@@ -8,11 +8,12 @@ import java.util.ArrayList;
 @Service
 public class Servicio {
     ArrayList<Ciudad> listaCiudad = new ArrayList<Ciudad>();
-    Ciudad c = new Ciudad();
+    Ciudad c;
 
     //A este método se le dan datos desde el controlador que se guardan en una ciudad para que esa ciudad se guarde
     //en la lista
     public void createCiudad(String nombre, int numeroHabitantes){
+        c = new Ciudad();
         c.setNombre(nombre);
         c.setNumeroHabitantes(numeroHabitantes);
         listaCiudad.add(c);
